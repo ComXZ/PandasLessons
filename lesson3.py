@@ -1,5 +1,5 @@
 import pandas
-drinks = pandas.read_csv("drinks.csv", usecols=["wine_servings", "country"], index_col="country", squeeze=True)
-wine = pandas.Series(drinks["wine_servings"].values, index = drinks["country"].values)
-print(drinks)
+drinks = pandas.read_csv("drinks.csv", usecols=["wine_servings", "country"])
+wine = pandas.Series(drinks["wine_servings"].values, drinks["country"].values)
+print(wine)
 print(type(wine))
